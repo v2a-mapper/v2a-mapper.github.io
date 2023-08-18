@@ -2,7 +2,7 @@
 
 This is the repository that contains source code for the [V2A-Mapper website](https://v2a-mapper.github.io).
 
-If you find V2A-Mapper useful for your work please cite:
+If you find V2A-Mapper useful for your work please kindly cite:
 ```
 @article{v2a-mapper,
   author    = {Wang, Heng and Ma, Jianbo and Pascual, Santiago and Cartwright, Richard and Cai, Weidong},
