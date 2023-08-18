@@ -1,4 +1,4 @@
-# Nerfies
+# V2A-Mapper
 
 This is the repository that contains source code for the [V2A-Mapper website](https://v2a-mapper.github.io).
 
