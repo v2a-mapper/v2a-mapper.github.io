@@ -174,6 +174,9 @@
               <a href="#method">Method</a>
             </li>
             <li>
+              <a href="#more">Visually-guided Sound Generation Examples</a>
+            </li>
+            <li>
               <a href="#im2a-prior">Image-to-Audio Generation: Comparison with Prior Works</a>
             </li>
             <li>
@@ -185,9 +188,7 @@
             <li>
               <a href="#latent">Latent Space Interpolation</a>
             </li>
-            <li>
-              <a href="#more">More Results</a>
-            </li>
+            
           </ul>
         </div>
         </div>
@@ -257,6 +258,93 @@
       </div>
     </div>
   </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Interpolation -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="more">Visually-guided Sound Generation Examples</h2>
+
+        <!-- Guided by image -->
+        <div class="content has-text-justified">
+          <p>Our V2A-Mapper helps synthesize high-fidelity and visually-relevant sound based on images/videos.</p>
+        <h3 class="title is-4">Synthetic image-guided sound generation</h3>
+
+          <p>
+            The first three images are generated with <a href="https://www.midjourney.com/showcase/recent/">Midjourney</a> and the last one is a cat meme.
+          </p>
+          <div class="t" >
+            <ul>
+              <li>
+                <img src="./static/image-to-sound/image/dog.png" />
+                <audio controls>
+                    <source src=./static/image-to-sound/audio/dog.wav type="audio/wav">
+                  </audio>
+              </li>
+              <li>
+                <img src="./static/image-to-sound/image/tiger.png" />
+                <audio controls>
+                    <source src=./static/image-to-sound/audio/tiger.wav type="audio/wav">
+                  </audio>
+              </li>
+              <li>
+                <img src="./static/image-to-sound/image/forest.png" />
+                <audio controls>
+                    <source src=./static/image-to-sound/audio/forest.wav type="audio/wav">
+                  </audio>
+              </li>
+              <li>
+                <img src="./static/image-to-sound/image/drum.png" />
+                <audio controls>
+                    <source src=./static/image-to-sound/audio/drum.wav type="audio/wav">
+                  </audio>
+              </li>
+              
+            </ul>
+            </div>
+        </div>
+        <br/>
+        <!--/ Guided by image -->
+
+        <!-- Guided by text -->
+        <div class="content has-text-justified">
+        <h3 class="title is-4">Video-guided sound generation</h3>
+
+          <ul>
+            <li>
+              <iframe src="./static/video-to-sound/rel_17_p.mp4" frameborder="0" allowfullscreen></iframe>
+            </li>
+        
+            <li>
+              <iframe src="./static/video-to-sound/carrace_ours.mp4" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+              <iframe src="./static/video-to-sound/rel_14_p.mp4" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+              <iframe src="./static/video-to-sound/waterbubble.mp4" frameborder="0" allowfullscreen></iframe>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <iframe src="./static/video-to-sound/game_sound.mp4" frameborder="0" allowfullscreen></iframe>
+            </li>
+        
+            <li>
+              <iframe src="./static/video-to-sound/snow_walk.mp4" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+              <iframe src="./static/video-to-sound/cartoon_bird.mp4" frameborder="0" allowfullscreen></iframe>
+            </li>
+            <li>
+              <iframe src="./static/video-to-sound/steel.mp4" frameborder="0" allowfullscreen></iframe>
+            </li>
+          </ul>
+
+        </div>
+    </div>
 </section>
 
 <!-- <a href="https://pages.cs.huji.ac.il/adiyoss-lab/im2wav/"> </a>-->
@@ -1148,93 +1236,7 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Interpolation -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3" id="more">More Results</h2>
 
-        <!-- Guided by image -->
-        <div class="content has-text-justified">
-          <p>We present more generated samples from our method for both images and videos.</p>
-        <h3 class="title is-4">More on synthetic images</h3>
-
-          <p>
-            We explore the ability of our method to synthetic images. 
-            The first three images are generated with <a href="https://www.midjourney.com/showcase/recent/">Midjourney</a> and the last one is a cat meme.
-          </p>
-          <div class="t" >
-            <ul>
-              <li>
-                <img src="./static/image-to-sound/image/dog.png" />
-                <audio controls>
-                    <source src=./static/image-to-sound/audio/dog.wav type="audio/wav">
-                  </audio>
-              </li>
-              <li>
-                <img src="./static/image-to-sound/image/tiger.png" />
-                <audio controls>
-                    <source src=./static/image-to-sound/audio/tiger.wav type="audio/wav">
-                  </audio>
-              </li>
-              <li>
-                <img src="./static/image-to-sound/image/forest.png" />
-                <audio controls>
-                    <source src=./static/image-to-sound/audio/forest.wav type="audio/wav">
-                  </audio>
-              </li>
-              <li>
-                <img src="./static/image-to-sound/image/drum.png" />
-                <audio controls>
-                    <source src=./static/image-to-sound/audio/drum.wav type="audio/wav">
-                  </audio>
-              </li>
-              
-            </ul>
-            </div>
-        </div>
-        <br/>
-        <!--/ Guided by image -->
-
-        <!-- Guided by text -->
-        <div class="content has-text-justified">
-        <h3 class="title is-4">More on videos</h3>
-
-          <ul>
-            <li>
-              <iframe src="./static/video-to-sound/rel_17_p.mp4" frameborder="0" allowfullscreen></iframe>
-            </li>
-        
-            <li>
-              <iframe src="./static/video-to-sound/carrace_ours.mp4" frameborder="0" allowfullscreen></iframe>
-            </li>
-            <li>
-              <iframe src="./static/video-to-sound/rel_14_p.mp4" frameborder="0" allowfullscreen></iframe>
-            </li>
-            <li>
-              <iframe src="./static/video-to-sound/waterbubble.mp4" frameborder="0" allowfullscreen></iframe>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <iframe src="./static/video-to-sound/game_sound.mp4" frameborder="0" allowfullscreen></iframe>
-            </li>
-        
-            <li>
-              <iframe src="./static/video-to-sound/snow_walk.mp4" frameborder="0" allowfullscreen></iframe>
-            </li>
-            <li>
-              <iframe src="./static/video-to-sound/cartoon_bird.mp4" frameborder="0" allowfullscreen></iframe>
-            </li>
-            <li>
-              <iframe src="./static/video-to-sound/steel.mp4" frameborder="0" allowfullscreen></iframe>
-            </li>
-          </ul>
-
-        </div>
-    </div>
-</section>
 
 
 
