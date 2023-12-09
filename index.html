@@ -195,6 +195,12 @@
             <li>
               <a href="#latent">Latent Space Interpolation</a>
             </li>
+            <li>
+              <a href="#bridge-gap">Domain Gap Bridging Process</a>
+            </li>
+            <li>
+              <a href="#vta-bottleneck">Why Vision-Text-Audio is Bottlenecked by the Captioner</a>
+            </li>
             
           </ul>
         </div>
@@ -1243,8 +1249,105 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Interpolation -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="bridge-gap">Supplementary Demo 1: Domain Gap Bridging Process</h2>
 
+        <!-- Guided by image -->
+        <div class="content has-text-justified">
+          <p>
+          In this section, we demonstrate the proposed V2A-Mapper can bridge the domain gap between vision and audio spaces. If the mapper is absent (w/o the mapper), directly conditioning the audio generator with CLIP embeddings (i.e., the visual features) would lead to random and nonsense results. The examples below demonstrate the CLIP space is not understandable by the audio generator. After placing the proposed V2A-Mapper in between (w/ the mapper), we can observe that the generated sound makes much more sense. With the mapper, the vision space has been converted into the corresponding auditory space which can be interpreted by the audio generator.
+          </p>
 
+          <div class="grid-container">
+            <div class="grid-item">
+              <img src="./static/domain_gap_audio-demo/frog1.jpg" alt="main table" />
+              w/o the mapper
+              <audio controls>
+                <source src="./static/domain_gap_audio-demo/frog1_wo_mapper.wav" type="audio/wav">
+              </audio>
+              w/ the mapper
+              <audio controls>
+                <source src="./static/domain_gap_audio-demo/frog1_proposed.wav" type="audio/wav">
+              </audio>
+            </div>
+
+            <div class="grid-item">
+              <img src="./static/domain_gap_audio-demo/sheep1.jpg" alt="main table" />
+              w/o the mapper
+              <audio controls>
+                <source src="./static/domain_gap_audio-demo/sheep1_wo_mapper.wav" type="audio/wav">
+              </audio>
+              w/ the mapper
+              <audio controls>
+                <source src="./static/domain_gap_audio-demo/sheep1_proposed.wav" type="audio/wav">
+              </audio>
+            </div>
+
+            <div class="grid-item">
+              <img src="./static/domain_gap_audio-demo/train2.jpg" alt="main table" />
+              w/o the mapper
+              <audio controls>
+                <source src="./static/domain_gap_audio-demo/train2_wo_mapper.wav" type="audio/wav">
+              </audio>
+              w/ the mapper
+              <audio controls>
+                <source src="./static/domain_gap_audio-demo/train2_proposed.wav" type="audio/wav">
+              </audio>
+            </div>
+
+        </div>
+        </div>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Interpolation -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" id="vta-bottleneck">Supplementary Demo 2: Why Vision-Text-Audio is Bottlenecked by the Captioner</h2>
+
+        <!-- Guided by image -->
+        <div class="content has-text-justified">
+          <p>
+          In this section, we demonstrate why using a captioner to generate description and then apply text-to-audio generator is not an optimal solution to the vision-to-audio synthesis problem. Given available image-to-text (e.g. BLIP) and text-to-audio (e.g. AudioLDM) generation systems, it is intuitive to adopt a vision-text-audio pipeline to solve the vision-to-audio synthesis task without any training. However, we observe that this intuitive solution is bottlenecked by the performance of the captioner. As shown below, if BLIP fails at predicting the object (<font color="#ff0000">drum set</font> instead of <font color="#2AAA8A">bongo</font>; <font color="#ff0000">flute</font> instead of <font color="#2AAA8A">harmonica</font>), the sound output would also be wrong.
+          </p>
+
+          <div class="grid-container">
+            <div class="grid-item">
+              <img src="./static/vision_text_audio_demo/bongo2.jpg" alt="main table" />
+              vision-text-audio w/ BLIP-generated captions
+              <i>"a man sitting in front of a <font color="#ff0000">drum set</font>"</i>
+              <audio controls>
+                <source src="./static/vision_text_audio_demo/bongo2_txt-based.wav" type="audio/wav">
+              </audio>
+              w/ mapper
+              <audio controls>
+                <source src="./static/vision_text_audio_demo/bongo2_proposed.wav" type="audio/wav">
+              </audio>
+            </div>
+
+            <div class="grid-item">
+              <img src="./static/vision_text_audio_demo/harmonica2.jpg" alt="main table" />
+              vision-text-audio w/ BLIP-generated captions
+              <i>"a man with dreadlocks playing a <font color="#ff0000">flute</font>"</i>
+              <audio controls>
+                <source src="./static/vision_text_audio_demo/harmonica2_txt-based.wav" type="audio/wav">
+              </audio>
+              w/ mapper
+              <audio controls>
+                <source src="./static/vision_text_audio_demo/harmonica2_proposed.wav" type="audio/wav">
+              </audio>
+            </div>
+
+        </div>
+        </div>
+
+</section>
 
 
 
